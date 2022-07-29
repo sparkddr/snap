@@ -118,7 +118,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-
+      {/* Login Register */}
       <div className="hidden md:flex gap-8 ">
         <button className="hover:text-AlmostBlack transition-colors duration-300">
           Login
@@ -137,6 +137,9 @@ const Navbar = () => {
           />
         )}
       </div>
+
+      {/* Modal */}
+
       <Transition show={isMainMenuOpen} as={Fragment}>
         <Dialog
           onClose={() => {
@@ -201,7 +204,7 @@ const Navbar = () => {
                     leaveTo="opacity-0 -translate-y-6"
                     className="relative"
                   >
-                    <div className=" flex flex-col gap-3 mt-4 top-10 right-0 w-[170px]">
+                    <ul className=" flex flex-col gap-3 mt-4 top-10 right-0 w-[170px]">
                       <li className="grid grid-cols-4  items-center hover:text-AlmostBlack transition-colors duration-300">
                         {" "}
                         <img
@@ -235,7 +238,7 @@ const Navbar = () => {
                         />{" "}
                         <span className="col-span-3 ml-2">Planning</span>
                       </li>
-                    </div>
+                    </ul>
                   </Transition>
                 </li>
                 <li className=" relative ">
@@ -266,7 +269,7 @@ const Navbar = () => {
                     leaveTo="opacity-0 -translate-y-6"
                     className="relative"
                   >
-                    <div className=" flex flex-col gap-3 mt-4 top-10 right-0 w-[170px] px-3">
+                    <ul className=" flex flex-col gap-3 mt-4 top-10 right-0 w-[170px] px-3">
                       <li className="hover:text-AlmostBlack transition-colors duration-300">
                         History
                       </li>
@@ -276,7 +279,7 @@ const Navbar = () => {
                       <li className="hover:text-AlmostBlack transition-colors duration-300">
                         Blog
                       </li>
-                    </div>
+                    </ul>
                   </Transition>
                 </li>
                 <li className="hover:text-AlmostBlack transition-colors duration-300">
@@ -286,6 +289,14 @@ const Navbar = () => {
                   About
                 </li>
               </ul>
+              <div className="flex flex-col gap-8 text-MediumGray mt-10 ">
+                <button className="hover:text-AlmostBlack transition-colors duration-300">
+                  Login
+                </button>
+                <button className="hover:text-AlmostBlack border-2 border-MediumGray hover:border-AlmostBlack px-5 py-2 rounded-2xl transition-colors duration-300">
+                  Register
+                </button>
+              </div>
             </Dialog.Panel>
           </Transition.Child>
         </Dialog>
